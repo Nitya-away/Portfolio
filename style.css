@@ -1,0 +1,88 @@
+:root {
+    --hpos: 95%;
+    --cpos: 80%
+    --jpos: 70%;
+    --pypos: 60%;
+    --sqlpos: 40%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pixeboy';
+    src: url(assets/font/Pixeboy-z8XGD.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(48,45,45);
+}
+
+#container {
+    font-family: 'Pixeboy';
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    background-color: rgb(32,28,28);
+    position: fixed;
+    z-index: 9;
+}
+
+.navbar {
+    font-family: 'Pixeboy';
+    background-color: rgb(32,28,28);
+    color: #E11D74;
+}
+
+#listofnavbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar li {
+    list-style: none;
+    margin: 15px 3px;
+}
+
+
+.navbar li a {
+    background-color: rgb(48,45,45);
+    color: #E11D74;
+    padding: 10px 35px;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    box-shadow: -2px 0 0 0 black,
+        2px 0 0 0 black,
+        0 -2px 0 0 black,
+        0 -2px 0 0 black;
+    border-right: 4px solid rgb(32,28,28);
+    border-top: 4px solid rgb(69,67,67);
+    border-bottom: 4px solid rgb(32,28,28);
+}
+
+.navbar a:hover {
+    background-color: rgb(29,25,25);
+    color: #f80303;
+    text-shadow: 1px 1px 20px #E11D74;
+}
+
+.navbar a:active {
+    border-left: 3px solid white;
+    background-color: rgb(23,20,20);
+    border-right: 4px solid rgb(29,25,25);
+    border-top: 4px solid rgb(29,25,25);
+    border-bottom: 4px solid rgb(29,25,25);
+}
+
+
