@@ -85,4 +85,115 @@ header {
     border-bottom: 4px solid rgb(29,25,25);
 }
 
+#main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    color: #E11D74;
+    border: 2px solid;
+    margin: auto;
+    align-items: center;
+    margin-top: 80px;
+    padding: 16px;
+    border-right: 10px solid rgb(23,20,20);
+    border-top: 10px solid rgb(69,67,67);
+    border-bottom: 10px solid rgb(23,20,20);
+    box-shadow: -6px 0 0 0 black,
+    6px 0 0 0 black,
+    0 -6px 0 0 black,
+    0 6px 0 0 black;
+}
+
+#imagebox {
+    min-width: 300px;
+    padding: 10px;
+}
+
+#imagebox img {
+    max-width: 100%;
+    min-width: 100%;
+    border: 4px solid black;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 6px rgb(32,28,28);
+    image-rendering: crisp-edges;
+}
+
+#boxesWrapper {
+    color: #E11D74;
+    font-size: 1.5em;
+    margin-top: 15px;
+    background-color: #1f1f1f;
+    border-left: 5px solid rgb(23,20,20);
+    border-right: 5px solid rgb(69,67,67);
+    border-top: 5px solid rgb(23,20,20);
+    border-bottom: 5px solid rgb(69,67,67);
+}
+
+#namebox {
+    padding-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#feildbox {
+    font-size: 0.8em;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#descriptbox {
+    line-height: 18px;
+    padding: 5px;
+    font-size: 0.8em;
+    font-style: oblique ;
+}
+
+.socialMediaButtonsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#boxesWrapper a {
+    text-decoration: none;
+    margin: 20px 10px 5px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-left: 3px solid rgb(69,67,67);
+    border-top: 3px solid rgb(48,45,45);
+    border-right: 3px solid rgb(23,20,20);
+    border-bottom: 3px solid rgb(69,67,67);
+}
+
+#boxesWrapper a img {
+    width: 100%;
+    height: auto;
+}
+
+#boxesWrapper a:hover {
+    background-color: rgb(29,25,25);
+}
+
+#boxesWrapper a:active {
+    border-left: 3px solid #E11D74;
+    background-color: rgb(23,20,20);
+    border-right: 3px solid rgb(29,25,25);
+    border-top: 3px solid rgb(29,25,25);
+    border-bottom: 3px solid #E11D74;
+}
+
 
