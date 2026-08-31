@@ -290,3 +290,23 @@ header {
     font-size: x-large;
     color: antiquewhite;
 }
+
+.progressbar {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.progressbox {
+    flex: 1;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    background-color: rgb(48,45,45);
+    border: 2px solid rgb(69,67,67);
+    border-radius: 3px;
+}
+
