@@ -1,6 +1,6 @@
 :root {
     --hpos: 95%;
-    --cpos: 80%
+    --cpos: 80%;
     --jpos: 70%;
     --pypos: 60%;
     --sqlpos: 40%;
@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'Pixeboy';
-    src: url(assets/font/Pixeboy-z8XGD.ttf);
+    src: url(assets/font/Pixeboy.ttf);
 }
 
 html {
@@ -197,3 +197,96 @@ header {
 }
 
 
+.myintro {
+    color: #E11D74;
+    border: 2px solid;
+    margin: auto;
+    align-items: center;
+    margin-top: 50px;
+    padding: 16px;
+    border-left: 2px solid #E11D74;
+    border-right: 10px solid rgb(23,20,20);
+    border-top: 10px solid rgb(69,67,67);
+    border-bottom: 10px solid rgb(23, 20, 20);
+    box-shadow: -6px 0 0 0 black,
+    6px 0 0 0 black,
+    0 -6px 0 0 black,
+    0 6px 0 0 black;
+}
+
+#myimpskills {
+    font-size: 3em;
+    padding: 2%;
+    background-color: #1f1f1f;
+    border-left: 5px solid rgb(23,20,20);
+    border-right: 5px solid rgb(69,67,67);
+    border-top: 5px solid rgb(23,20,20);
+    border-bottom: 5px solid rgb(69,67,67);
+}
+
+#meters {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+}
+
+.skillmeter {
+    width: calc(100% - 10px);
+    padding: 10px 0px;
+    margin-top: 20px;
+    background-color: #1f1f1f;
+    border-left: 5px solid rgb(23,20,20);
+    border-right: 5px solid rgb(69,67,67);
+    border-top: 5px solid rgb(23,20,20);
+    border-bottom: 5px solid rgb(69,67,67);
+}
+
+.meterhead {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: large;
+    padding-bottom: 0.6em;
+}
+
+.meterscale {
+    padding: 1em;
+    justify-content: center;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    background-color: #E11D74;
+}
+
+.skillmeter:nth-child(1) .meterscale {
+    background-image: conic-gradient(#E11D74 0%, #E11D74 var(--hpos), rgb(48,45,45) 0%);
+}
+
+.skillmeter:nth-child(2) .meterscale {
+    background-image: conic-gradient(#E11D74 0%, #E11D74 var(--cpos), rgb(48,45,45) 0%);
+}
+
+.skillmeter:nth-child(3) .meterscale {
+    background-image: conic-gradient(#E11D74 0%, #E11D74 var(--jpos), rgb(48,45,45) 0%);
+}
+
+.skillmeter:nth-child(4) .meterscale {
+    background-image: conic-gradient(#E11D74 0%, #E11D74 var(--pypos), rgb(48,45,45) 0%);
+}
+
+.skillmeter:nth-child(5) .meterscale {
+    background-image: conic-gradient(#E11D74 0%, #E11D74 var(--sqlpos), rgb(48,45,45) 0%);
+}
+
+.metercover {
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+}
+
+.metertext {
+    padding-top: 1.3em;
+    font-size: x-large;
+    color: antiquewhite;
+}
