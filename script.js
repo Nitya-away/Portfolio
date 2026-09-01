@@ -2,10 +2,11 @@ var times = 0;
 var progressBarAnimated = false;
 
 
-window.addEventListener('load' , () => {
+window.addEventListener('load', () => {
+  setTimeout(() => {
     document.getElementById('loadingscreen').style.display = 'none';
+  }, 1200);
 });
-
 
 let projectcards = Array.from(document.getElementsByClassName("projectcards"));
 
@@ -47,3 +48,51 @@ function move() {
         if (allDone) clearInterval(id);
     }
 }
+
+function animateProgressBar(section) {
+    const skillMeters = section.querySelectorAll('.skillmeter');
+    const targetFills = [10,8,9,7,8,5];
+
+    skillMeters.forEach((meter, meterIndex) => {
+        const progressBoxes = meter.querySelectorAll('.progressbox');
+        const targetFill = targetFills[meterIndex] || 0;
+        let currentFill = 0;
+
+        const fillInterval = setInterval(() => {
+            if (currentFill < targetFill) {
+                progressBoxes[currentFill].style.backgroundColor = '#E11D74';
+                currentFill++;
+            } else {
+                clearInterval(fillInterval);
+            }
+        }, 80);
+    });
+}
+
+function isInViewport(element) {
+    let b = element.getBoundingClientRect();
+    return (
+        b.top >= 0 &&
+        b.left >= 0 &&
+        b.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+        b.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+
+window.addEventListener('scroll', () => {
+    let skillsSection = document.querySelector('.myintro');
+    if (isInViewport(skillsSection) && times === 0) {
+        times = 1;
+        move();
+    }
+
+    if (!progressBarAnimated) {
+        let allSections = document.querySelectorAll('.myintro');
+        let toolsSection = allSections[allSections.length - 1];
+        if (toolsSection && isInViewport(toolsSection)) {
+            progressBarAnimated = true;
+            animateProgressBar(toolsSection);
+        } 
+    }
+});
