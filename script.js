@@ -18,13 +18,13 @@ projectcards.forEach((card) => {
 
 function move() {
     let root = document.querySelector(':root');
-    let metertexts = document.querySelectorAll('.metertext');
+    let metertext = document.querySelectorAll('.metertext');
 
     let targetValues = [];
     let currentValues = [];
 
 
-    metertexts.forEach((text) => {
+    metertext.forEach((text) => {
         targetValues.push(parseInt(text.innerText));
         currentValues.push(0);
         text.innerText = '0%';
@@ -39,7 +39,8 @@ function move() {
         for (let i = 0; i < currentValues.length; i++) {
             if (currentValues[i] < targetValues[i]) {
                 currentValues[i]++;
-                meterTexts[i].innerText = currentValues[i] + '%';
+                metertext[i].innerText = currentValues[i] + '%';
+                root.style.setProperty(cssProps[i], currentValues[i] + '%');
                 allDone = false;
             }
         }
